@@ -1,7 +1,7 @@
 # tirick1-transform-css
 **If you have a lot of information to display on your site, why don't you use my accordion menu**
 
-![view](https://github.com/user-attachments/assets/46ddddc3-342e-412d-8c03-750c33654382)
+![view]<img width="1281" height="733" alt="Image" src="https://github.com/user-attachments/assets/fc9ce792-e721-424f-909f-4d7122e21033" />)
 
 
 🌐[Demo Project](https://shabnamshabanpour.github.io/tirick1-transform-css/)
