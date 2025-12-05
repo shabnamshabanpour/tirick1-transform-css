@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    perspective: 1600px;
+
+    /* perspective: 1600px; */
+    >.cube-menu {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+
+        &:hover {
+            >:nth-of-type(1) {
+                transform: rotateX(-130deg) translateZ(2px);
+            }
+
+            >:nth-of-type(2) {
+                transform: rotateX(130deg) translateZ(2px);
+            }
+
+            >:nth-of-type(3) {
+                transform: rotateY(-130deg) translateZ(2px);
+            }
+
+            >:nth-of-type(4) {
+                transform: rotateY(130deg) translateZ(2px);
+            }
+        }
+
+        >div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* background-color: rgb(28, 28, 28); */
+            border: 2px solid rgb(68, 68, 68);
+            color: white;
+            border-radius: 12px;
+            transition: transform 0.6s cubic-bezier(.25, .8, .25, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+
+            >h2 {
+                transform: scaleY(-1);
+            }
+
+            &:nth-of-type(5) {
+                background: linear-gradient(135deg, #ff6a95 0%, #ff3d7f 55%, #b5007a 100%);
+                z-index: 10;
+            }
+
+            &:nth-of-type(1) {
+                background: linear-gradient(135deg, #ffd86b 0%, #ff9a3d 55%, #ff5a00 100%);
+                transform-origin: top;
+                transform: rotateX(0deg);
+            }
+
+            &:nth-of-type(2) {
+                background: linear-gradient(135deg, #6ee7ff 0%, #37bff6 55%, #0066ff 100%);
+                transform-origin: bottom;
+                transform: rotateX(0deg);
+            }
+
+            &:nth-of-type(3) {
+                background: linear-gradient(135deg, #9bffb8 0%, #34d399 55%, #00a86b 100%);
+                transform-origin: left;
+                transform: rotateY(0deg);
+
+                >h2 {
+                    transform: scaleX(-1);
+                }
+            }
+
+            &:nth-of-type(4) {
+                background: #45095E;
+                background: linear-gradient(101deg, rgba(69, 9, 94, 0.96) 19%, rgba(30, 10, 48, 0.87) 87%);
+                transform-origin: right;
+                transform: rotateY(0deg);
+
+                >h2 {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    >.coyright {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            >.info {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        >img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(219, 215, 215, 0.8);
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        >.info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+
+            >.name {
+                font-weight: bold;
+                color: rgb(129, 128, 128);
+                font-size: 17px;
+                margin: 0 0 5px 0
+            }
+
+            >.socials {
+                display: flex;
+                color: rgb(129, 128, 128);
+                gap: 10px;
+                /* background-color: red; */
+                &:hover{
+                    >svg{
+                        transform: scale(1.2);
+                    }
+                }
+
+                >a {
+                    >svg {
+                        width: 40px;
+                        height: 20px;
+                        transition: transform 0.3s;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
