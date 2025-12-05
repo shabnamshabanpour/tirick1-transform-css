@@ -1,5 +1,5 @@
 # tirick1-transform-css
-**If you have a lot of information to display on your site, why don't you use my accordion menu**
+**This is my training which is a transform trick that has made with HTML & CSS**
 
 <img width="716" height="600" alt="Image" src="https://github.com/user-attachments/assets/d2f81f80-2c7a-4c8b-9da1-e721b948d291" />
 
